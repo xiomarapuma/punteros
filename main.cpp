@@ -16,6 +16,16 @@ int suma(int arr[],int tam){ ///recibe una direccion de memoria int arr[]== int 
         arr++;
      }
 }
+//suma de elementos de un arreglo recursiva
+int sumaRecursiva(int *arr,int *tam){
+    if (arr==tam){
+        return *arr; //a[0]
+    }
+    else{
+        return *arr+sumaRecursiva(arr+1,tam);
+    }
+}
+
 /*
 void invertir(int *arr ,int tam){
     arr [] = *ptr ;
@@ -34,8 +44,11 @@ int main()
 {
     int x[]={5,2,3,4};
     imprimir(x,4);
-    /*
+    
+    int x[]={4,5,7,8,9,4};
 
+    cout << sumaRecursiva(x,x+5);
+    /*
     cout << *arr << endl ;
     int *ptr;
     ptr =arr ;
